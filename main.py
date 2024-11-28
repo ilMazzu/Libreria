@@ -1,6 +1,5 @@
 from libri import *
-scelta = 8
-while scelta != 0:
+while True:
     print("-------------------------------------------------------------")
     print("Benvenuti in libreria")
     print("1 - Aggiungi un Libro")
@@ -36,10 +35,10 @@ while scelta != 0:
         
     elif scelta == 0:
         print("Grazie di aver utilizzato il nostro gestionale")
-        
+
     else:
         print("Scegli un numero da 0 a 6")
-        break
+    
 
 
 
