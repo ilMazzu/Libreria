@@ -8,7 +8,7 @@ def aggiuntalibro():
     else:
         catalogo.append(titolo)
         print("il tuo libro chiamato", titolo, "è stato aggiunto al catalogo" )
-        print(catalogo)
+        print("Catalogo:", catalogo)
 
 def prestitolibro(titolo):
     if titolo in catalogo:
