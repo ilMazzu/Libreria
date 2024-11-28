@@ -33,8 +33,13 @@ while scelta != 0:
 
     elif scelta == 6:
         print(libriprestati)
+        
     elif scelta == 0:
         print("Grazie di aver utilizzato il nostro gestionale")
+        
+    else:
+        print("Scegli un numero da 0 a 6")
+        break
 
 
 
