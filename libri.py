@@ -11,16 +11,24 @@ def aggiuntalibro():
         print(catalogo)
 
 def prestitolibro(titolo):
-    
-    catalogo.remove(titolo)
-    libriprestati.append(titolo)
-    print("libri prestati: ", libriprestati)
-    print("catalogo: ", catalogo)
+    if titolo in catalogo:
+        catalogo.remove(titolo)
+        libriprestati.append(titolo)
+        print("libri prestati: ", libriprestati)
+        print("catalogo: ", catalogo)
+    elif titolo in libriprestati:
+        print("Attualmente non è disponibile, è in prestito")
+    else:
+        print("non lo abbiamo")
 
 def riportalibro(titolo):
-    catalogo.append(titolo)
-    print("Hai riportato il libro chiamato", titolo, ", è stato aggiunto al catalogo" )
-    print(catalogo)
+    if titolo in libriprestati:
+        libriprestati.remove(titolo)
+        catalogo.append(titolo)
+        print("Hai riportato il libro chiamato", titolo, ", è stato aggiunto al catalogo" )
+        print(catalogo)
+    else:
+        ("Questo libro non è nostro, però se vuoi puoi comunque lasciarcelo")
 
 def disponibilelibro(titolo):
     if titolo in catalogo:
