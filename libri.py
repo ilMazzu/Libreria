@@ -3,9 +3,12 @@ libriprestati = []
 
 def aggiuntalibro():
     titolo = input("Come si chiama il Libro?")
-    catalogo.append(titolo)
-    print("il tuo libro chiamato", titolo, "è stato aggiunto al catalogo" )
-    print(catalogo)
+    if titolo in catalogo:
+        print("Lo abbiamo già")
+    else:
+        catalogo.append(titolo)
+        print("il tuo libro chiamato", titolo, "è stato aggiunto al catalogo" )
+        print(catalogo)
 
 def prestitolibro(titolo):
     
@@ -26,6 +29,9 @@ def disponibilelibro(titolo):
         print("Attualmente non è disponibile, ma tornerà presto")     
     else:
         print("Non lo abbiamo mi dispiace")
+
+
+    
 
 
 
